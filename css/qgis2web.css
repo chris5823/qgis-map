@@ -197,9 +197,4 @@
         .leaflet-control-layers-expanded .leaflet-control-layers-toggle {
             display: none;
         }
-	    @media (max-width: 768px) {
-    	    svg path.leaflet-interactive {
-      	    	stroke-width: 12px !important;
-    	    }
-  	    }
 
