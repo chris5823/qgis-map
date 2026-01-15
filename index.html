@@ -18,6 +18,12 @@
             padding: 0;
             margin: 0;
         }
+  /* Improve mobile tap accuracy */
+  	@media (max-width: 768px) {
+    	    svg path.leaflet-interactive {
+      	    	stroke-width: 12px !important;
+    	    }
+  	}
         </style>
         <title></title>
     </head>
@@ -56,7 +62,7 @@
         }
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[50.61920350485704,-3.3305669094049004],[51.04608986546594,-2.3209648656275634]]);
+        }).fitBounds([[50.32588828958352,-3.2659968424126955],[51.33492779708855,-2.385534932619768]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
