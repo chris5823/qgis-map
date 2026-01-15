@@ -1,0 +1,1 @@
+var json_BeaminsterJulia_1 = {"type":"FeatureCollection","name":"BeaminsterJulia_1","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"fid":"0","qc_id":null,"beaminster town centre":null},"geometry":{"type":"Point","coordinates":[-2.739067745299855,50.808968862074423]}}]}
