@@ -56,7 +56,7 @@
         }
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[50.378001183238595,-3.0093844832088434],[52.07093570014216,0.6829627006134007]]);
+        }).fitBounds([[50.76812020895788,-2.62516319914411],[51.150030105975034,-1.7970886842843512]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -156,13 +156,16 @@
                         <td colspan="2"><strong>Ward</strong><br />' + (feature.properties['Ward'] !== null ? autolinker.link(String(feature.properties['Ward']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>Councillors</strong><br />' + (feature.properties['Councillors'] !== null ? autolinker.link(String(feature.properties['Councillors']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <th scope="row">Councillors</th>\
+                        <td>' + (feature.properties['Councillors'] !== null ? autolinker.link(String(feature.properties['Councillors']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>Objectors</strong><br />' + (feature.properties['Objectors'] !== null ? autolinker.link(String(feature.properties['Objectors']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <th scope="row">Objectors</th>\
+                        <td>' + (feature.properties['Objectors'] !== null ? autolinker.link(String(feature.properties['Objectors']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>Supporters</strong><br />' + (feature.properties['Supporters'] !== null ? autolinker.link(String(feature.properties['Supporters']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <th scope="row">Supporters</th>\
+                        <td>' + (feature.properties['Supporters'] !== null ? autolinker.link(String(feature.properties['Supporters']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
