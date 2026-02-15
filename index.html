@@ -57,7 +57,7 @@
         }
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[50.7843815325062,-2.7798504349687],[50.82547811972216,-2.7025782261719504]]);
+        }).fitBounds([[50.78550107232578,-2.7852122051078485],[50.82298911622419,-2.7014196428145074]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -220,12 +220,12 @@
                         <td>' + (feature.properties['Councillors'] !== null ? autolinker.link(String(feature.properties['Councillors']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Objectors</th>\
-                        <td>' + (feature.properties['Objectors'] !== null ? autolinker.link(String(feature.properties['Objectors']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
                         <th scope="row">Supporters</th>\
                         <td>' + (feature.properties['Supporters'] !== null ? autolinker.link(String(feature.properties['Supporters']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Objectors</th>\
+                        <td>' + (feature.properties['Objectors'] !== null ? autolinker.link(String(feature.properties['Objectors']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
